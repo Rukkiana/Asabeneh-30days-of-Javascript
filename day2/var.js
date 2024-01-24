@@ -64,10 +64,24 @@ console.log(sentence2.match('/because/gi'));
 const sentences='%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
 let regEx = /[!@#$%&;]/g
 console.log(sentences.replace(regEx, ''));
-let monthlyIncome=5000*12
-let annualBonus=1000
-let monthlyCourses=15000*12
-console.log(monthlyIncome + annualBonus + monthlyCourses);
+
+let extract='He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let extractNum =/\d+/gi;
+console.log(extract.match(extractNum));
+
+let a = extract.match(extractNum);
+console.log(a);
+let ai = +a[0 ]* 12;
+let bi = +a[2]*12;
+let output = ai +bi +10000;
+console .log(ai);
+console.log(bi);
+console.log(output);
+
+
+
+
+
 
 
 
